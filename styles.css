@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Star Jedi Outline';
+  src: url('/assets/fonts/StarJediOutline.woff2') format('woff2'),
+    url('/assets/fonts/StarJediOutline.woff') format('woff');
+  font-weight: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Star Jedi Outline';
+  height: 100vh;
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  cursor: url('assets/images/commando.cur'), auto;
+}
+
+header {
+  padding: 30px;
+}
+
+header .container {
+  width: 70%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-name {
+  color: #feca30;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.game-countdown {
+  color: #d4d4d4;
+  font-size: 2rem;
+}
+
+.container {
+  width: 65%;
+  height: 75%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: calc(15% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #feca30;
+  border-radius: 8px;
+  background-color: #222222;
+}
+
+.card__font-face-image {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.card__back-face-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.card__back-face-image:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #feca30;
+  z-index: 100;
+  font-size: 6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.win-text,
+.play-again-text {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  header .container {
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .overlay {
+    font-size: 4rem;
+  }
+
+  .win-text,
+  .play-again-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .overlay {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+  }
+
+  .game-name {
+    font-size: 2rem;
+  }
+
+  .game-countdown {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 100%;
+    height: 40%;
+  }
+
+  .card {
+    width: calc(27% - 10px);
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1367px) {
+  header .container {
+    flex-direction: column;
+  }
+}
